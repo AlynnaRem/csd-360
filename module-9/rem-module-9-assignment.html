@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+        Student: Alynna Rem
+        Date: 9/25/2022
+        Course: CSD360-306J Interactive Dev with JavaScr (2227-DD)
+        Professor: John Woods
+        Assignment: Module 9 Programming Assignment
+        Instructions:
+            For this assignment, create a function titled counter that takes an array of numbers as the parameter. 
+            The function is then to return an array holding the numbers of negative elements, zeros, and values greater than zero in the given array parameter.
+    -->
+
+    <head>
+        <title>Module 9 Assignment</title>
+
+        <!-- Link to stylesheet -->
+        <link rel='stylesheet' type='text/css' href='body1.css' />
+   
+        <h1>Module 9 Assignment: Array of Numbers</h1>
+    </head>
+	
+	<body>
+
+        <h2>An array of numbers will be passed to a function, which will return an array holding the numbers of negative elements, zeros, and values greater than zero in the given array parameter.</h2>
+
+        <!-- JS Code -->
+        <script type ="text/javascript">
+
+            // create a function titled counter that takes an array of numbers as the parameter
+            function counter(array){
+
+                // declare and initialize the counters for negative, zero, and positive elements
+                var negativeCounter = 0, zeroCounter = 0, positiveCounter = 0;
+                
+                // Loop through array length
+                for(var i = 0; i < array.length ; i++){
+                    // if number is negative increase negativeCounter count by one
+                    if(array[i] < 0 ){
+                        negativeCounter++;
+                    }
+                    // if number is positive increase positiveCounter count by one
+                    else if(array[i] > 0){
+                        positiveCounter++
+                    }
+                    // if number is zero increase zeroCounter count by one
+                    else{
+                        zeroCounter++;
+                    }
+                }
+
+                // declare and initialize an array to hold the negative, zero, and positive element counts
+                var amount = [negativeCounter, zeroCounter, positiveCounter];
+                return amount;
+            }
+            
+            // declare and initialize array1
+            var array1 = [-7, -5, -3, -1, 0, 2, 4, 6, 8, 10];
+ 
+                // pass the numbers in array1 as parameters in the counter function
+                amount = counter(array1);
+
+                // display numbers in array1
+                document.write("Here are the numbers in the array: ");
+                document.write("</br>");
+
+                for (var i = 0; i < array1.length; i++){
+                    document.write(array1[i]);
+                    document.write("</br>");
+
+                }
+                
+                // display array of negative, zero, and positive element counts
+                document.write("</br>");
+                document.write("The array holding the negative count, zero count, and positive count: ");
+                document.write(amount);
+                document.write("</br>");
+                document.write("</br>");
+
+                // display the negative count in a sentence
+                document.write("Here is the count of negative elements in the array: ");
+                document.write(amount[0]);
+                document.write("</br>");
+
+                // display the zero count in a sentence
+                document.write("Here is the count of zero elements in the array: ");
+                document.write(amount[1]);
+                document.write("</br>");
+
+                // display the positive count in a sentence
+                document.write("Here is the count of positive elements in the array: ");
+                document.write(amount[2]);
+                document.write("</br>");
+                
+        </script>
+
+	</body>
+
+<html>

@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+  'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+    <!--
+        Student: Alynna Rem
+        Date: 10/7/2022
+        Course: CSD360-306J Interactive Dev with JavaScr (2227-DD)
+        Professor: John Woods
+        Assignment: Module 11 Programming Assignment
+        Instructions:
+            1. Create a page similar to the example attached to this assignment that alters the DOM based on user input.
+            2. Create a function that is executed when an image is clicked, using the “onclick” MouseEvent.
+    -->
+
+
+    <head>
+        <title>
+            Module 11 Assignment
+        </title>
+
+        <!-- Link to stylesheet -->
+        <link rel='stylesheet' type='text/css' href='body1.css' />
+
+        <h1>Module 11 Assignment: Changing Images</h1>
+        
+        <!-- Add JavaScript code -->
+        <script type="text/javascript">
+ 
+          function displayImage(imageFile){
+            var largerImage = document.getElementById("mainImage");
+            var newNode = document.createElement("img");
+            newNode.id = "mainImage";
+            newNode.src = imageFile;
+            newNode.alt = "Large Image";
+            newNode.className = "mainImage";
+            newNode.style.width = "300px";
+            newNode.style.height = "300px";
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+          }
+
+
+          var fileTitles = ["nicole-king-tePtZeHXOus-unsplash.jpg", "thiago-sanchez-tsKtAGclcKI-unsplash.jpg", "robert-lukeman-PH0HYjsf2n8-unsplash.jpg", "evan-sanchez-2kyqmUBQQDQ-unsplash.jpg", "mj-tangonan-OE6qLhRHhhs-unsplash.jpg", "jeffrey-workman-YvkH8R1zoQM-unsplash.jpg", 
+                        "sergey-pesterev-wZLsZ9DRLSI-unsplash.jpg", "mike-swigunski-NfkWUOkB78c-unsplash.jpg", "vinicius-benedit-C5bIF1Lw9zM-unsplash.jpg"];
+                        
+          function startToRotate(){
+            var position = Math.floor(Math.random() * 5);
+            
+            for(var i = 0; i < 5; ++i){
+                rotateImages(i, position++);
+            }
+        }
+
+          function rotateImages(i, position){
+            var imageID = "image_" + (i + 1);
+            imageFile = fileTitles[position++];
+            var largerImage = document.getElementById("image_" + (i + 1));
+            var newNode = document.createElement("img");
+            newNode.id = imageID;
+            newNode.src = imageFile;
+            newNode.alt = "Image " + i + 1;
+            newNode.className = imageID;
+            newNode.style.width = "300px";
+            newNode.style.height = "300px";
+            newNode.onclick = function() { startToRotate(); };
+            largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+
+        </script>
+    
+      </head>
+    
+      <body>
+        
+        <!-- Create table to hold images -->
+        <table>
+          <tr>
+            <!-- Set main image to span 3 rows -->
+            <td rowspan="3">
+              <img src="nicole-king-tePtZeHXOus-unsplash.jpg"  id="mainImage" alt="Large Image"
+              width = "300px" height = "300px">
+            </td>
+            <!-- Thumbnail 1-->
+          <td><img src="nicole-king-tePtZeHXOus-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('nicole-king-tePtZeHXOus-unsplash.jpg')"
+              ></td>
+            <!-- Thumbnail 2-->
+          <td><img src="thiago-sanchez-tsKtAGclcKI-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('thiago-sanchez-tsKtAGclcKI-unsplash.jpg')"
+              ></td>
+            <!-- Thumbnail 3-->
+          <td><img src="robert-lukeman-PH0HYjsf2n8-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('robert-lukeman-PH0HYjsf2n8-unsplash.jpg')"
+              ></td>
+          </tr>
+          <tr>
+
+            <!-- Thumbnail 4-->
+          <td><img src="evan-sanchez-2kyqmUBQQDQ-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('evan-sanchez-2kyqmUBQQDQ-unsplash.jpg')"
+              ></td>
+            <!-- Thumbnail 5-->
+          <td><img src="mj-tangonan-OE6qLhRHhhs-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('mj-tangonan-OE6qLhRHhhs-unsplash.jpg')"
+              ></td>
+            <!-- Thumbnail 6-->
+          <td><img src="jeffrey-workman-YvkH8R1zoQM-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('jeffrey-workman-YvkH8R1zoQM-unsplash.jpg')"
+              ></td>
+          </tr>
+          <tr>
+
+            <!-- Thumbnail 7-->
+          <td><img src="sergey-pesterev-wZLsZ9DRLSI-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('sergey-pesterev-wZLsZ9DRLSI-unsplash.jpg')"
+              ></td>
+            <!-- Thumbnail 8-->
+          <td><img src="mike-swigunski-NfkWUOkB78c-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('mike-swigunski-NfkWUOkB78c-unsplash.jpg')"
+              ></td>
+            <!-- Thumbnail 9-->
+          <td><img src="vinicius-benedit-C5bIF1Lw9zM-unsplash2.jpg" id="thumbnail"
+                   onclick="displayImage('vinicius-benedit-C5bIF1Lw9zM-unsplash.jpg')"
+              ></td>
+          </tr>
+        </table>
+
+    </br>
+        <!-- Create and second table to hold rotating images -->
+        <table>
+            <tr>
+              <td>
+                <img src="nicole-king-tePtZeHXOus-unsplash.jpg"  id="image_1" alt="Image 1"
+                width = "300px" height = "300px""
+                onclick="startToRotate()">
+              </td>
+              <td>
+                <img src="thiago-sanchez-tsKtAGclcKI-unsplash.jpg"  id="image_2" alt="Image 1"
+                width = "300px" height = "300px""
+                onclick="startToRotate()">
+              </td>
+              <td>
+                <img src="robert-lukeman-PH0HYjsf2n8-unsplash.jpg"  id="image_3" alt="Image 1"
+                width = "300px" height = "300px""
+                onclick="startToRotate()">
+              </td>
+              <td>
+                <img src="evan-sanchez-2kyqmUBQQDQ-unsplash.jpg"  id="image_4" alt="Image 1"
+                width = "300px" height = "300px""
+                onclick="startToRotate()">
+              </td>
+              <td>
+                <img src="mj-tangonan-OE6qLhRHhhs-unsplash.jpg"  id="image_5" alt="Image 1"
+                width = "300px" height = "300px""
+                onclick="startToRotate()">
+              </td>
+            </tr>
+          </table>
+    
+      </body>
+    
+    </html>

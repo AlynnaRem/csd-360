@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+        Student: Alynna Rem
+        Date: 9/4/2022
+        Course: CSD360-306J Interactive Dev with JavaScr (2227-DD)
+        Professor: John Woods
+        Assignment: Module 5 Programming Assignment
+        Description: There will be two "dices". This program will display a random number between 1 to 6 for each dice, 
+        then add the total, and display a message. 
+        If the total is 2, the user will see "Snake Eyes"
+        If the total is 12, the user will see "Box Cars"
+        If the total is 7 or 11, the user will see "You win"
+        If the total is none of the above, the user will see the total without a message
+    -->
+
+    <head>
+        <title>Module 5 Assignment</title>
+
+        <!-- Link to stylesheet -->
+        <link rel='stylesheet' type='text/css' href='body1.css' />
+        
+            <h1>Module 5 Assignment: Dice Roll</h1> 
+            <br>
+
+            <script type = "text/javascript">
+            function rollDice(){
+            document.form1.dice1.value = Math.floor((Math.random() * 6) + 1);
+            document.form1.dice2.value = Math.floor((Math.random() * 6) + 1);
+            document.form1.total.value = parseInt(document.form1.dice1.value) +
+            parseInt(document.form1.dice2.value);
+            var total = parseInt(document.form1.dice1.value) + parseInt(document.form1.dice2.value);
+            
+            switch(total){
+                case 2: 
+                document.form1.total.value = total + " " + "Snake Eyes"; // If the total is 2, the user will see "Snake Eyes"
+                break;
+                case 12: 
+                document.form1.total.value = total + " " + "Box Cars"; // If the total is 12, the user will see "Box Cars"
+                break;
+                case 7:
+                case 11:
+                document.form1.total.value = total + " " + "You win"; // If the total is 7 or 11, the user will see "You win"
+                break;
+                defaut:
+                document.form1.total.value = total; // All remaining values, the user will see the total without a message.
+             }
+            }
+           </script>
+           <form name='form1'>
+            <table border='1'>
+            <tr>
+            <td> Dice 1 </td>
+            <td> <input type='text' name='dice1' /> </td>
+
+            <td> Dice 2 </td>
+            <td> <input type='text' name='dice2' /> </td>
+            <td> <input type='button' name='button1' onclick='rollDice()' value=' Roll Dice ' /> </td>
+            
+            <td> Total </td>
+            <td> <input type='text' name='total' /> </td>
+            </tr>
+            </table>
+            <input type='button' name='button5' value='Reset' onclick='reset()' />
+           </form>
+
+    </head>
+	
+	<body>
+	</body>
+
+<html>

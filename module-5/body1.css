@@ -1,0 +1,11 @@
+body {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+h1 {
+    background-color: #3c275a;
+    color: #fff;
+    border: 10px solid #3c275a;
+    padding: 10px;
+}
+

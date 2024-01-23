@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+        Student: Alynna Rem
+        Date: 8/28/2022
+        Course: CSD360-306J Interactive Dev with JavaScr (2227-DD)
+        Professor: John Woods
+        Assignment: Module 4 Programming Assignment
+        Instructions:
+        
+        Start with the following two lines of JavaScript:
+            var i = 842;
+            document.write(i + i % 3 / 7 - 2 + 7 ** 3);
+        
+        Use parentheses to modify the output line to alter the result of 1183.2857142857142 to the following list of outputs.
+            341.14285714285717
+            1185.4
+            842.0011574074074
+            113.28571428571433
+            343.2
+            841.75 
+    -->
+
+    <head>
+        <title>Module 4 Assignment</title>
+
+        <!-- Link to stylesheet -->
+        <link rel='stylesheet' type='text/css' href='body1.css' />
+
+        <h1>Module 4 Assignment</h1>
+
+    </head>
+
+    <body>
+
+        <div>
+            <h2> Instructions </h2>
+                
+            <h3>Start with the following two lines of JavaScript:
+                <ul>
+                    <li>var i = 842;</li>
+                    <li>document.write(i + i % 3 / 7 - 2 + 7 ** 3);</li>
+                </ul>
+            </h3>
+            
+            <h3>Use parentheses to modify the output line to alter the result of 1183.2857142857142 to the following list of outputs.
+                <ul>
+                    <li>341.14285714285717</li>
+                    <li>1185.4</li>
+                    <li>842.0011574074074</li>
+                    <li>113.28571428571433</li>
+                    <li>343.2</li>
+                    <li>841.75</li>
+                </ul>
+            </h3>
+        </div>
+
+        <br>
+
+        <table>
+            <tr>
+                <th>Formula</th>
+                <th>Result</th>
+            </tr>
+            <tr> 
+                <td> i + i % 3 / 7 - 2 + 7 ** 3 </td>
+                <td><script>
+                var i = 842;
+                document.write(i + i % 3 / 7 - 2 + 7 ** 3); // Output: 1183.2857142857142
+                </script>
+                </td>
+            </tr>
+
+            <tr> 
+                <td> (i + i) % 3 / 7 - 2 + 7 ** 3 </td>
+                <td><script>
+                var i = 842;
+                document.write((i + i) % 3 / 7 - 2 + 7 ** 3); // Output: 341.14285714285717
+                </script>
+                </td>
+            </tr>
+
+            <tr> 
+                <td> i + i % 3 / (7 - 2) + 7 ** 3 </td>
+                <td><script>
+                var i = 842;
+                document.write(i + i % 3 / (7 - 2) + 7 ** 3); // Output: 1185.4
+                </script>
+                </td>
+            </tr>
+
+            <tr> 
+                <td> i + i % 3 / (7 - 2 + 7) ** 3 </td>
+                <td><script>
+                var i = 842;
+                document.write(i + i % 3 / (7 - 2 + 7) ** 3); // Output: 842.0011574074074
+                </script>
+                </td>
+            </tr>
+
+            <tr> 
+                <td> i + i % 3 / 7 - (2 + 7) ** 3 </td>
+                <td><script>
+                var i = 842;
+                document.write(i + i % 3 / 7 - (2 + 7) ** 3); // Output: 113.28571428571433
+                </script>
+                </td>
+            </tr>
+
+            <tr> 
+                <td> (i + i) % 3 / (7 - 2) + 7 ** 3 </td>
+                <td><script>
+                var i = 842;
+                document.write((i + i) % 3 / (7 - 2) + 7 ** 3); // Output: 343.2
+                </script>
+                </td>
+            </tr>
+
+            <tr> 
+                <td> i + ((i % 3) / ((7 - (2 + 7)) ** 3)) </td>
+                <td><script>
+                var i = 842;
+                document.write(i + ((i % 3) / ((7 - (2 + 7)) ** 3))); // Output: 841.75
+                </script>
+                </td>
+            </tr>
+
+        </table>
+	
+	</body>
+
+<html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <!--
+        Student: Alynna Rem
+        Date: 9/18/2022
+        Course: CSD360-306J Interactive Dev with JavaScr (2227-DD)
+        Professor: John Woods
+        Assignment: Module 7 Programming Assignment
+        Instructions:
+        
+        For this assignment, create an array of 10 favorite sport teams. 
+        Using a for loop, print the array first in the original array order and then in reverse order. 
+        Using for loop headers something like the following:
+            for(var i = 0; i < myArray.length; i++){
+    -->
+
+    <head>
+        <title>Module 7 Assignment</title>
+
+        <!-- Link to stylesheet -->
+        <link rel='stylesheet' type='text/css' href='body1.css' />
+        
+        <h1>Module 7 Assignment: Favorite Sport Teams</h1>
+    </head>
+	
+	<body>
+
+        <script type ="text/javascript">
+
+            // Create an array of 10 favorite sport teams
+            var sportTeams = ["Minnesota Vikings", "Pittsburg Steelers", "Boston Celtics", "Los Angeles Lakers", "Chicago Bulls", "Miami Heat", "New York knicks", "Chicago Bears", "Los Angeles Rams", "Philadelphia Eagles"];
+            
+            document.write("<br/>"); // add line break
+            document.write("Here's a list of my favorite sport teams:");
+            document.write("<ul>"); // create unordered list
+                // using a for loop, print the array first in the original array order
+                for(var i = 0; i < sportTeams.length; ++i){
+                    document.write("<li>" + sportTeams[i] + "</li>");
+                }
+                document.write("</ul>");
+
+            document.write("<br/>"); // add line break
+            document.write("Here's a list of my favorite sport teams in reverse order:");
+            sportTeams.reverse(); // use the reverse() method to reverse the elements in an array
+            document.write("<ul>"); // create unordered list
+                // using a for loop, print the array in reverse order
+                for(var i = 0; i < sportTeams.length; ++i){
+                    document.write("<li>" + sportTeams[i] + "</li>");
+                }
+                document.write("</ul>");
+                
+        </script>
+
+	</body>
+
+<html>

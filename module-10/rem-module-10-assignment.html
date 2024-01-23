@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+'http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+    <!--
+        Student: Alynna Rem
+        Date: 9/30/2022
+        Course: CSD360-306J Interactive Dev with JavaScr (2227-DD)
+        Professor: John Woods
+        Assignment: Module 10 Programming Assignment
+        Instructions:
+            For this assignment, review the attached example that demonstrates altering of an element style in response to a user event. 
+            Using information you have interest in, create a page with style alterations based on user events such as an image change, font style and/or color, and background color.
+    -->
+
+  <head>
+
+    <title>
+      Module 10 Assignment
+    </title>
+
+    <h1>Module 10 Assignment: Changing Element Styles</h1>
+    
+    <script type ="text/javascript">
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+
+  </head>
+
+  <body
+    onmouseover="this.style.backgroundColor = 'lightblue';"
+    onmouseout= "this.style.backgroundColor = 'white';">
+
+    <br />
+    <div class="grid">
+    <div>
+      <a href=#
+         onclick="PalmTree.src='image1.jpg';"
+         ondblclick= "PalmTree.src='image2.jpg';"
+      >
+        <img border = 0 name = "PalmTree" src = "image2.jpg">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='blue';"
+         onmouseout= "this.style.color='black';">
+
+      Click the image to change the image
+      <br />
+      Double click the image to change the image back to the original
+      <br />
+
+    </div>
+    </div>
+
+    <div class="grid">
+    <div>
+      <a href=#
+         onmouseover="CherryBlossom.src='image3.jpg';"
+         onmouseout= "CherryBlossom.src='image4.jpg';"
+      >
+        <img border = 0 name = "CherryBlossom" src = "image4.jpg">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='blue';"
+         onmouseout= "this.style.color='black';">
+
+      Run your mouse over the image to change.
+      <br />
+      Right-click and select View Source for more details.
+
+    </div>
+    </div>
+
+  </body>
+
+</html>

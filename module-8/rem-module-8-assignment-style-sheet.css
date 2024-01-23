@@ -1,0 +1,29 @@
+body {
+  font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+h1 {
+  background-color: #3c275a;
+  color: #fff;
+  border: 10px solid #3c275a;
+  padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid;
+    font-size: 20px;
+    text-align: left;
+  }
+
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+th {
+    height: 50px;
+}
